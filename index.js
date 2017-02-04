@@ -4,7 +4,13 @@ var ejs = require('ejs');
 var app = express();
 
 app.get('/', function(request, response) {
-    response.sendFile(__dirname + '/index.html');
+    //response.sendFile(__dirname + '/index.html');
+    fs.readFile('courses.json', 'utf8', function(err, data) {
+    var courses = JSON.parse(data);
+    response.locals = {courses: courses};
+    response.render('index.ejs');
+    });
+    
 });
 app.get('/courses', function(request, response) {
     fs.readFile('courses.json', 'utf8', function(err, data) {
