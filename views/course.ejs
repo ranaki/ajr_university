@@ -1,0 +1,11 @@
+
+<a href='/courses'>Back</a>
+<% if(course) { %>
+  <h1>Course Name: <%= course.course_name %></h1>
+  <h3>Description: <%= course.descrption %></h3>
+  <h3>Instructor: <%= course.instructor %></h3>
+  <h3># of TA's: <%= course.number_of_tas %></h3>
+  <h3># Students: <%= course.num_students %></h3>
+<% } else { %>
+   <h1>Course not found</h1>
+<% } %>
