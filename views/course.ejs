@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <title>Online Courses</title>
   </head>
   <body>
+  <div class="container">
     <a href='/courses'>Back</a>
+    <div class="divider"></div>
     <% if(course) { %>
-        <h1>Course Name: <%= course.course_name %></h1>
-        <h3>Description: <%= course.description %></h3>
-        <h3>Instructor: <%= course.instructor %></h3>
-        <h3># of TA's: <%= course.number_of_tas %></h3>
-        <h3># Students: <%= course.num_students %></h3>
+        <h3>Course Name: <%= course.course_name %></h3>
+        <h5>Description: <%= course.description %></h5>
+        <h5>Instructor: <%= course.instructor %></h5>
+        <h5># of TA's: <%= course.number_of_tas %></h5>
+        <h5># Students: <%= course.num_students %></h5>
         <% } else { %>
         <h1>Course not found</h1>
     <% } %>
-  </body>
+  </div>
+ </body>
 </html> 

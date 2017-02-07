@@ -17,16 +17,18 @@
     </header>
 
       <div class='container'>
-        <h1>AJR University<h1>
+        <div class="center-align blue-text text-darken-4"><h1>AJR University<h1></div>
         <div class='row blue lighten-4'>
           <h5 class="col s6"><a href="/courses">List the courses</a></h5> <h5 class="col s6"><a href="/contacts">Contact Us</a></h5>
         </div>
-        <% courses.forEach( function(course) { %>
-            <div class="divider"></div>
-            <div class="row">
-              <h5 class="col s2"><%= course.course_name %>: </h5><h5 class="col s3"><a style='font-size: 18px;' href=<%= '/courses/' + course.id %> >Learn More</a></h5>
-            </div>
-        <% }); %>   
+        <div class="section"></div>
+        <div class="center-align blue-text text-darken-4"><h5>We teach the full stack</h5></div>
+        <div class="divider"></div>
+        <div class="row">
+          <% courses.forEach( function(course) { %>
+            <a style='font-size: 18px;' href=<%= '/courses/' + course.id %> ><div class="card-panel hoverable col s3 light-green lighten-4"><h5><%= course.course_name %></h5></div> </a>
+          <% }); %> 
+        </div>
     </div>
  </body>
  </html> 
